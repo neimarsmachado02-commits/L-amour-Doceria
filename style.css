@@ -444,8 +444,30 @@ header:not(.scrolled) .logo svg circle {
 /* Secrets Section */
 #segredos {
     padding: 10rem 0;
-    background-color: var(--white);
+    background-image: url('assets/fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
 }
+
+#segredos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(250, 243, 224, 0.85); /* Tom champagne com opacidade para legibilidade */
+    z-index: 1;
+}
+
+#segredos .container {
+    position: relative;
+    z-index: 2;
+}
+
 
 .section-title {
     text-align: center;
@@ -468,7 +490,7 @@ header:not(.scrolled) .logo svg circle {
 .secret-card {
     text-align: center;
     padding: 5rem 3rem;
-    background: var(--card-bg);
+    background: #FFDDE2; /* Rosa bebê suave */
     border-radius: 20px;
     transition: var(--transition);
     position: relative;
@@ -491,7 +513,7 @@ header:not(.scrolled) .logo svg circle {
 
 .secret-card:hover {
     transform: translateY(-15px);
-    background: var(--card-bg);
+    background: #FFDDE2;
     box-shadow: 0 40px 80px rgba(45, 27, 20, 0.08);
     border-color: var(--secondary);
 }
@@ -515,14 +537,14 @@ header:not(.scrolled) .logo svg circle {
     margin-bottom: 0;
 }
 
-/* Flavors Section */
-#sabores {
+/* Cardápio Section */
+#cardapio {
     padding: 10rem 0;
 }
 
 .flavors-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 4rem;
 }
 
@@ -634,7 +656,7 @@ footer p {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
     gap: 4rem;
     margin-bottom: 4rem;
     padding-bottom: 4rem;
@@ -668,20 +690,34 @@ footer ul li a:hover {
     padding-left: 5px;
 }
 
-.social-icons {
-    display: flex;
-    gap: 1.5rem;
+.contact-list {
+    list-style: none;
 }
 
-.social-icons a {
-    color: var(--white);
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+}
+
+.contact-list li a {
+    color: rgba(255,255,255,0.8);
     text-decoration: none;
-    font-size: 0.9rem;
     transition: var(--transition);
 }
 
-.social-icons a:hover {
+.contact-list li a:hover {
     color: var(--primary);
+}
+
+.footer-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .footer-bottom {
