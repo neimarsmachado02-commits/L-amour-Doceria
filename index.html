@@ -25,6 +25,9 @@
 
     <section id="hero">
         <div class="container hero-content">
+            <div class="hero-image animate-fade">
+                <img src="assets/logo.png" alt="L'amour Doceria logo Panda Chef" class="hero-logo-large">
+            </div>
             <div class="hero-text animate-up">
                 <span class="subtitle">Confeitaria Artesanal</span>
                 <h1>A Arte do Doce em <br>Cada Detalhe</h1>
@@ -32,9 +35,6 @@
                 <div class="hero-actions">
                     <a href="#cardapio" class="btn-primary">Conheça nosso Cardápio</a>
                 </div>
-            </div>
-            <div class="hero-image animate-fade">
-                <img src="assets/hero.png" alt="Cone Trufado Gourmet L'amour com chocolate nobre">
             </div>
         </div>
     </section>
@@ -138,96 +138,98 @@
         </div>
     </section>
 
-    <section id="checkout" class="container reveal">
-        <div class="section-title">
-            <h2>Finalize seu Pedido</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="checkout-grid">
-            <!-- Dados de Entrega -->
-            <div class="checkout-form">
-                <h3>Dados de Entrega</h3>
-                <div class="form-grid">
-                    <div class="form-group full">
-                        <label for="endereco">Endereço Completo</label>
-                        <input type="text" id="endereco" placeholder="Ex: Rua das Flores, 123">
-                    </div>
-                    <div class="form-group">
-                        <label for="bairro">Bairro</label>
-                        <input type="text" id="bairro" placeholder="Seu bairro">
-                    </div>
-                    <div class="form-group">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" placeholder="Sua cidade">
-                    </div>
-                </div>
-
-                <h3 style="margin-top: 2rem;">Forma de Pagamento</h3>
-                <div class="payment-methods">
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="pix" checked>
-                        <div class="payment-card">
-                            <span class="icon">📱</span>
-                            <span>Pix</span>
-                        </div>
-                    </label>
-                    <label class="payment-option">
-                        <input type="radio" name="payment" value="card">
-                        <div class="payment-card">
-                            <span class="icon">💳</span>
-                            <span>Cartão</span>
-                        </div>
-                    </label>
-                </div>
+    <section id="checkout" class="reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Finalize seu Pedido</h2>
+                <div class="divider"></div>
             </div>
+            
+            <div class="checkout-grid">
+                <!-- Dados de Entrega -->
+                <div class="checkout-form">
+                    <h3>Dados de Entrega</h3>
+                    <div class="form-grid">
+                        <div class="form-group full">
+                            <label for="endereco">Endereço Completo</label>
+                            <input type="text" id="endereco" placeholder="Ex: Rua das Flores, 123">
+                        </div>
+                        <div class="form-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" placeholder="Seu bairro">
+                        </div>
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" placeholder="Sua cidade">
+                        </div>
+                    </div>
 
-            <!-- Detalhes do Pagamento -->
-            <div class="checkout-details">
-                <div id="pix-details" class="payment-detail-box">
-                    <h3>Pagamento via Pix</h3>
-                    <div class="qrcode-container">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=LamourDoceriaPix" alt="QR Code Pix">
-                        <p class="pix-code">lamour-pix-key-12345</p>
-                        <button class="btn-secondary">Copiar Código Pix</button>
+                    <h3 style="margin-top: 2rem;">Forma de Pagamento</h3>
+                    <div class="payment-methods">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="pix" checked>
+                            <div class="payment-card">
+                                <span class="icon">📱</span>
+                                <span>Pix</span>
+                            </div>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card">
+                            <div class="payment-card">
+                                <span class="icon">💳</span>
+                                <span>Cartão</span>
+                            </div>
+                        </label>
                     </div>
                 </div>
 
-                <div id="card-details" class="payment-detail-box" style="display: none;">
-                    <h3>Dados do Cartão</h3>
-                    <div class="form-group">
-                        <label for="card-number">Número do Cartão</label>
-                        <input type="text" id="card-number" placeholder="0000 0000 0000 0000">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="card-expiry">Validade</label>
-                            <input type="text" id="card-expiry" placeholder="MM/AA">
-                        </div>
-                        <div class="form-group">
-                            <label for="card-cvv">CVV</label>
-                            <input type="text" id="card-cvv" placeholder="123">
+                <!-- Detalhes do Pagamento -->
+                <div class="checkout-details">
+                    <div id="pix-details" class="payment-detail-box">
+                        <h3>Pagamento via Pix</h3>
+                        <div class="qrcode-container">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=LamourDoceriaPix" alt="QR Code Pix">
+                            <p class="pix-code">lamour-pix-key-12345</p>
+                            <button class="btn-secondary">Copiar Código Pix</button>
                         </div>
                     </div>
-                </div>
 
-                <div class="order-summary">
-                    <div class="summary-line">
-                        <span>Subtotal</span>
-                        <span>R$ 85,00</span>
+                    <div id="card-details" class="payment-detail-box" style="display: none;">
+                        <h3>Dados do Cartão</h3>
+                        <div class="form-group">
+                            <label for="card-number">Número do Cartão</label>
+                            <input type="text" id="card-number" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="card-expiry">Validade</label>
+                                <input type="text" id="card-expiry" placeholder="MM/AA">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-cvv">CVV</label>
+                                <input type="text" id="card-cvv" placeholder="123">
+                            </div>
+                        </div>
                     </div>
-                    <div class="summary-line">
-                        <span>Entrega</span>
-                        <span>Grátis</span>
+
+                    <div class="order-summary">
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span>R$ 85,00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Entrega</span>
+                            <span>Grátis</span>
+                        </div>
+                        <div class="summary-line total">
+                            <span>Total</span>
+                            <span>R$ 85,00</span>
+                        </div>
+                        <button id="btn-finalizar" class="btn-primary" style="width: 100%; margin-top: 2rem;">
+                            <span class="btn-text">Confirmar e Finalizar</span>
+                            <div class="spinner"></div>
+                        </button>
                     </div>
-                    <div class="summary-line total">
-                        <span>Total</span>
-                        <span>R$ 85,00</span>
-                    </div>
-                    <button id="btn-finalizar" class="btn-primary" style="width: 100%; margin-top: 2rem;">
-                        <span class="btn-text">Confirmar e Finalizar</span>
-                        <div class="spinner"></div>
-                    </button>
                 </div>
             </div>
         </div>

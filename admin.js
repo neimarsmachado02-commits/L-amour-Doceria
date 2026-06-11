@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = document.getElementById('stockChart').getContext('2d');
     
     // Cores da paleta Luxury Truffle
-    const primaryColor = '#D4AF37'; // Gold Leaf
-    const accentColor = '#2D1B14';  // Dark Truffle
-    const secondaryColor = '#E8D1D1'; // Rose Quartz
+    const primaryColor = '#EC0B43'; // Rosa Choque
+    const accentColor = '#554348';  // Chocolate
+    const secondaryColor = '#F1B5CB'; // Rosa Suave
     
     const stockChart = new Chart(ctx, {
         type: 'bar',
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     display: false // Esconder legenda para um look mais clean
                 },
                 tooltip: {
-                    backgroundColor: '#2D1B14',
+                    backgroundColor: '#554348',
                     titleFont: { family: 'Montserrat', size: 14 },
                     bodyFont: { family: 'Montserrat', size: 13 },
                     padding: 15,
